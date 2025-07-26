@@ -1,5 +1,6 @@
 
 import { AiRecommender } from '@/components/ai-recommender';
+import GroupOrderMeter from '@/components/group-order-meter';
 import OrderStatusTracker from '@/components/order-status-tracker';
 import VendorAlerts from '@/components/vendor-alerts';
 import { Chat } from '@/components/chat';
@@ -17,6 +18,7 @@ export default function DashboardPage() {
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-5">
           <div className="xl:col-span-3 space-y-8">
             <OrderStatusTracker />
+          <GroupOrderMeter />
             <VendorAlerts />
             <AiRecommender />
             <SupplierListings />
