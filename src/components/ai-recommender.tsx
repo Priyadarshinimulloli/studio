@@ -84,7 +84,7 @@ export function AiRecommender() {
     <Card>
       <CardHeader>
         <CardTitle className="flex items-center gap-2 font-headline">
-          <Lightbulb className="h-5 w-5" />
+          <Lightbulb className="h-5 w-5 text-accent" />
           AI Supplier Recommendations
         </CardTitle>
         <CardDescription>
@@ -152,7 +152,11 @@ export function AiRecommender() {
                 </FormItem>
               )}
             />
-            <Button type="submit" disabled={isLoading} className="w-full sm:w-auto">
+            <Button
+              type="submit"
+              disabled={isLoading}
+              className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground"
+            >
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Get Recommendations
             </Button>
@@ -176,6 +180,7 @@ export function AiRecommender() {
                   <TableHead>Suitability</TableHead>
                   <TableHead>Trust Score</TableHead>
                   <TableHead>Quality</TableHead>
+                  <TableHead>Price</TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody>
@@ -183,17 +188,17 @@ export function AiRecommender() {
                   <TableRow key={index}>
                     <TableCell className='font-medium'>{rec.supplierName}</TableCell>
                     <TableCell>
-                      <Badge variant={rec.suitabilityScore > 8 ? "default" : "secondary"} className={rec.suitabilityScore > 8 ? 'bg-primary/80 text-primary-foreground' : ''}>
+                      <Badge variant={rec.suitabilityScore > 8 ? "default" : "secondary"} className={rec.suitabilityScore > 8 ? 'bg-primary text-primary-foreground' : ''}>
                         {rec.suitabilityScore}/10
                       </Badge>
                     </TableCell>
-                    <TableCell>{rec.trustScore}/100</TableCell>
+                    <TableCell>{Math.round(rec.trustScore)}/100</TableCell>
                     <TableCell>
                       <div className="flex items-center gap-1">
                         {rec.qualityRating}
-                        <Star className="h-3 w-3 text-accent fill-accent" />
                       </div>
                     </TableCell>
+                    <TableCell>{rec.price}</TableCell>
                   </TableRow>
                 ))}
               </TableBody>

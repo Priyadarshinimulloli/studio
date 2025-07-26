@@ -139,7 +139,7 @@ export function TrustScoreGenerator() {
                 </FormItem>
               )}
             />
-            <Button type="submit" disabled={isLoading} className="w-full sm:w-auto">
+            <Button type="submit" disabled={isLoading} className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-accent-foreground">
               {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
               Generate Score
             </Button>
@@ -157,7 +157,7 @@ export function TrustScoreGenerator() {
           <div className="mt-6 p-4 bg-secondary rounded-lg">
             <h3 className="font-bold mb-2 font-headline">Generated Score</h3>
             <div className="flex items-center justify-center text-center flex-col gap-2">
-                <p className={`text-5xl font-bold ${getScoreColor(result.trustScore)}`}>{result.trustScore}</p>
+                <p className={`text-5xl font-bold ${getScoreColor(result.trustScore)}`}>{Math.round(result.trustScore)}</p>
                 <p className="text-sm text-muted-foreground">out of 100</p>
             </div>
             <div className="mt-4">
