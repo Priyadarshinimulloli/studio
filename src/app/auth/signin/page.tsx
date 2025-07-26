@@ -38,8 +38,8 @@ export default function SignInPage() {
               </div>
               <Input id="password" type="password" required />
             </div>
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/90">
-              Sign In
+            <Button type="submit" asChild className="w-full bg-primary hover:bg-primary/90">
+              <Link href="/dashboard">Sign In</Link>
             </Button>
             <Button variant="outline" className="w-full">
               Sign in with Google

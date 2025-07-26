@@ -3,3 +3,4 @@ config();
 
 import '@/ai/flows/recommend-suppliers.ts';
 import '@/ai/flows/generate-trust-score.ts';
+import '@/ai/flows/generate-wishlist.ts';
