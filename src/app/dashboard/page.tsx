@@ -7,6 +7,7 @@ import VendorAlerts from '@/components/vendor-alerts';
 import { Chat } from '@/components/chat';
 import { DashboardHeader } from '@/components/dashboard-header';
 import { OrderHistory } from '@/components/order-history';
+import { PriceComparisonTool } from '@/components/price-comparison';
 import { SupplierListings } from '@/components/supplier-listings';
 import { TrustScoreGenerator } from '@/components/trust-score-generator';
 import { Wishlist } from '@/components/wishlist';
@@ -25,6 +26,7 @@ export default function DashboardPage() {
             </div>
             <VendorAlerts />
             <AiRecommender />
+            <PriceComparisonTool />
             <SupplierListings />
           </div>
           <div className="xl:col-span-2 space-y-8">

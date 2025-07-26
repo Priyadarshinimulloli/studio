@@ -15,6 +15,7 @@ import {
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { MessageSquare, Star, StarHalf, Users } from 'lucide-react';
+import { SupplierBadges } from '@/components/verification-badges';
 import type { Supplier } from '@/lib/types';
 import Image from 'next/image';
 
@@ -94,6 +95,7 @@ export function SupplierListings() {
               <TableRow>
                 <TableHead>Supplier</TableHead>
                 <TableHead className="hidden sm:table-cell">Location</TableHead>
+                <TableHead className="hidden lg:table-cell">Verification</TableHead>
                 <TableHead className="hidden md:table-cell">Quality</TableHead>
                 <TableHead>Price</TableHead>
                 <TableHead className="text-right">Action</TableHead>
@@ -116,6 +118,9 @@ export function SupplierListings() {
                     </div>
                   </TableCell>
                   <TableCell className="hidden sm:table-cell">{supplier.location}</TableCell>
+                  <TableCell className="hidden lg:table-cell">
+                    <SupplierBadges supplierId={supplier.id} />
+                  </TableCell>
                   <TableCell className="hidden md:table-cell">
                     <div className="flex items-center gap-1">
                       {renderStars(supplier.quality)}
