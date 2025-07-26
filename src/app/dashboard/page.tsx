@@ -1,5 +1,7 @@
 
 import { AiRecommender } from '@/components/ai-recommender';
+import OrderStatusTracker from '@/components/order-status-tracker';
+import VendorAlerts from '@/components/vendor-alerts';
 import { Chat } from '@/components/chat';
 import { DashboardHeader } from '@/components/dashboard-header';
 import { OrderHistory } from '@/components/order-history';
@@ -14,6 +16,8 @@ export default function DashboardPage() {
       <main className="flex-1 p-4 md:p-6 lg:p-8">
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-5">
           <div className="xl:col-span-3 space-y-8">
+            <OrderStatusTracker />
+            <VendorAlerts />
             <AiRecommender />
             <SupplierListings />
           </div>
