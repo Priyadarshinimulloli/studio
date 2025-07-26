@@ -1,10 +1,10 @@
 import { NextResponse } from 'next/server';
 
 // In-memory state (reset on server restart)
-let vendorCount = 7;
-let orderTotal = 12000;
+export let vendorCount = 7;
+export let orderTotal = 12000;
 let timeRemaining = "01:23:45";
-let vendors = ["Vendor A", "Vendor B", "Vendor C", "Vendor D", "Vendor E", "Vendor F", "Vendor G"];
+export let vendors = ["Vendor A", "Vendor B", "Vendor C", "Vendor D", "Vendor E", "Vendor F", "Vendor G"];
 
 function getPriceDrop(count: number) {
   if (count >= 10) return 20;
