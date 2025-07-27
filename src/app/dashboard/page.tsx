@@ -1,3 +1,4 @@
+import LiveMapGeoTracking from '@/components/LiveMapGeoTracking';
 
 import { AiRecommender } from '@/components/ai-recommender';
 import GroupOrderMeter from '@/components/group-order-meter';
@@ -21,7 +22,7 @@ export default function DashboardPage() {
         <div className="grid gap-8 grid-cols-1 xl:grid-cols-5">
           <div className="xl:col-span-3 space-y-8">
             <OrderStatusTracker />
-          <GroupOrderMeter />
+            <GroupOrderMeter />
             <div className="mt-6">
               <SupplierRecommendations />
             </div>
@@ -39,6 +40,11 @@ export default function DashboardPage() {
             </div>
             <Chat />
           </div>
+        </div>
+
+        {/* Live Map placed at the end */}
+        <div className="mt-10 h-[480px] w-full rounded-lg shadow-lg overflow-hidden">
+          <LiveMapGeoTracking />
         </div>
       </main>
     </div>

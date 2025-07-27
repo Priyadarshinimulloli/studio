@@ -3,6 +3,7 @@ import './globals.css';
 import {Toaster} from '@/components/ui/toaster';
 import { Inter as FontSans } from "next/font/google"
 import { cn } from "@/lib/utils"
+import 'leaflet/dist/leaflet.css';
 
 const fontSans = FontSans({
   subsets: ["latin"],

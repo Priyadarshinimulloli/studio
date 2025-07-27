@@ -1,4 +1,4 @@
-
+import 'leaflet/dist/leaflet.css';
 import { Button } from '@/components/ui/button';
 import { Leaf } from 'lucide-react';
 import Image from 'next/image';
