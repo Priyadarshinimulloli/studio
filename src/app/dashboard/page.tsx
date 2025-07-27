@@ -11,6 +11,7 @@ import { PriceComparisonTool } from '@/components/price-comparison';
 import { SupplierListings } from '@/components/supplier-listings';
 import { TrustScoreGenerator } from '@/components/trust-score-generator';
 import { Wishlist } from '@/components/wishlist';
+import { IssueReporting } from '@/components/issue-reporting';
 
 export default function DashboardPage() {
   return (
@@ -31,6 +32,7 @@ export default function DashboardPage() {
           </div>
           <div className="xl:col-span-2 space-y-8">
             <TrustScoreGenerator />
+            <IssueReporting vendorId="VENDOR-001" />
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-1 gap-8">
               <Wishlist />
               <OrderHistory />
