@@ -61,6 +61,8 @@ A modern, AI-powered dashboard for street food vendors to manage raw material so
 ### Installation
 
 ```bash
+git clone https://github.com/Priyadarshinimulloli/studio.git
+cd studio
 npm install
 ```
 
